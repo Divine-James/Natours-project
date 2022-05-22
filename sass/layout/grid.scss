@@ -1,0 +1,39 @@
+.row{
+    max-width: $grid-width;
+    
+    margin: 0 auto;
+    
+    &:not(:last-child){
+        margin-bottom: $vertical;
+    }
+    @include clearfix;
+
+[class^="col-"]{
+    float: left;
+    
+
+    &:not(:last-child){
+        margin-right: $horinzontal;
+    }
+}
+
+    .col-1-of-2{
+        width: calc((100% - #{$horinzontal})/2);
+    
+    }
+    .col-1-of-3{
+        width: calc((100% - (#{$horinzontal * 2}))/3);
+    }
+    .col-2-of-3{
+        width: calc(2 * ((100% - 2 * #{$horinzontal})/3) + #{$horinzontal});
+    }
+    .col-1-of-4 {
+        width: calc((100% - (#{$horinzontal * 3}))/4);
+    }
+    .col-2-of-4{
+        width: calc(2 *((100% - (3 * #{$horinzontal})) / 4) + #{$horinzontal});
+    }
+    .col-3-of-4{
+        width: calc(3 * ((100% - 3 * #{$horinzontal}) / 4) + 2 * #{$horinzontal});
+    }
+}
