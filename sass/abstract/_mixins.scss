@@ -12,3 +12,36 @@
     transform: translate(-50%, -50%);
 
 }
+
+//query manager  
+/*
+0 - 600px (mobile)
+600 - 900px (tablet)
+900 - 1200px (landscape)
+1200 - 1800px (where our style apply desktop)
+1800 + (big screen) 
+
+
+breakpoint arguement:
+- phone
+- tab-port
+- tab-land
+- big-screen
+order: base + typography > general layout + grid > page layout + components
+1em =  16px
+*/
+
+@mixin respond($breakpoint) {
+    @if $breakpoint== phone{
+        @media (max-width: 37.5em) {@content}; //600px  
+    }
+    @if $breakpoint== tab-port{
+        @media (max-width: 56.25em) {@content};  //900px
+    }
+    @if $breakpoint== tab-land{
+        @media (max-width: 75em) {@content};  //1200px
+    }
+    @if $breakpoint== big-screen{
+        @media (max-width: 112.5em) {@content};  //1800px
+    }
+} 
