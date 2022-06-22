@@ -3,7 +3,7 @@
 *::before {
     padding: 0;
     margin: 0;
-    
+    box-sizing: inherit;
 }
 
 html{
@@ -27,4 +27,8 @@ body {
     @include respond(tab-port){
         padding: 0;
     }
+}
+::selection {
+    background-color: $color-primary;
+    color: $color-white;
 }

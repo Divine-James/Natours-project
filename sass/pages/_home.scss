@@ -41,6 +41,9 @@
     @include respond (phone){
         padding: 5rem 0;
     }
+    @include respond (smallphone){
+        padding: 3rem 0;
+    }
 }
 .section__book{
     padding: 15rem 0;

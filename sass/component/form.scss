@@ -16,11 +16,9 @@
         display: block;
         transition: all .3s;
         @include respond (tab-port){
-            width: 60%;  
+            width: 100%;  
         }
-        @include respond (phone){
-            width: 50%;  
-        }
+
 
 
         &:focus {
