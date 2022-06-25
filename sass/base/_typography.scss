@@ -62,7 +62,7 @@ body {
          font-size: 2.5rem;
       }
       @include respond (smallphone){
-         font-size: 1.8rem;
+         font-size: 2rem;
       }
        &:hover{
           transform: skewY(2deg) skewX(15deg) scale(1.1);
